@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://155xx7s6y6ta"]
+
+[ext_resource type="Texture2D" uid="uid://c7n1w12k6bcga" path="res://Assets/GameJam_Pizzashop_Canvas.png" id="1_jjgbg"]
+[ext_resource type="AudioStream" uid="uid://xkb63q8ccosx" path="res://Assets/Spider-Man 2 The Game Pizza Theme.mp3" id="2_8gbba"]
+[ext_resource type="PackedScene" uid="uid://c5obbcvunthgd" path="res://Scenes/pizza.tscn" id="3_jjvhh"]
+
+[node name="Main" type="Node2D" unique_id=1732489957]
+
+[node name="BG" type="Sprite2D" parent="." unique_id=1918472777]
+position = Vector2(160, 90)
+texture = ExtResource("1_jjgbg")
+
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=1090421395]
+stream = ExtResource("2_8gbba")
+autoplay = true
+
+[node name="pizza" parent="." unique_id=350528180 instance=ExtResource("3_jjvhh")]
+position = Vector2(160, 111)
