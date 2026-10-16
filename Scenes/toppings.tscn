@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cvk4xp3pxv2ii"]
+
+[node name="toppings" type="Area2D" unique_id=153387449]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2084504312]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1647536356]

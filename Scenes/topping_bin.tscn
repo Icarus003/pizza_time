@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dmp7a45on57na"]
+
+[ext_resource type="Script" uid="uid://dqwvtqootab00" path="res://Scripts/topping_bin.gd" id="1_h2171"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w2wux"]
+size = Vector2(42, 16)
+
+[node name="topping bin" type="Area2D" unique_id=1665686462]
+script = ExtResource("1_h2171")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1735750454]
+shape = SubResource("RectangleShape2D_w2wux")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
