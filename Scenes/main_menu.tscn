@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://2yvq6yiiep7y"]
+
+[ext_resource type="Script" uid="uid://diogpnw6nc1vc" path="res://Scripts/main_menu.gd" id="1_1ehe0"]
+[ext_resource type="Texture2D" uid="uid://c7n1w12k6bcga" path="res://Assets/GameJam_Pizzashop_Canvas.png" id="1_28flt"]
+[ext_resource type="FontFile" uid="uid://bn6e76s1dg4c5" path="res://Assets/Caesar Little SS.ttf" id="2_48xlc"]
+
+[node name="main menu" type="Control" unique_id=791669268]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1ehe0")
+
+[node name="GameJamPizzashopCanvas" type="Sprite2D" parent="." unique_id=259343324]
+position = Vector2(160, 90)
+texture = ExtResource("1_28flt")
+
+[node name="title" type="Label" parent="." unique_id=1735908919]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -41.0
+offset_top = 25.0
+offset_right = 41.0
+offset_bottom = 48.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_48xlc")
+text = "Pizza Time"
+
+[node name="button container" type="VBoxContainer" parent="." unique_id=1881046803]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -33.0
+offset_right = 23.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="start button" type="Button" parent="button container" unique_id=1417308497]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_48xlc")
+text = "Start"
+
+[node name="exit button" type="Button" parent="button container" unique_id=1839987705]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_48xlc")
+text = "Exit"
+
+[connection signal="pressed" from="button container/start button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="button container/exit button" to="." method="_on_exit_button_pressed"]
