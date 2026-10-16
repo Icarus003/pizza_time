@@ -13,6 +13,7 @@ texture = ExtResource("1_jjgbg")
 [node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=1090421395]
 stream = ExtResource("2_8gbba")
 autoplay = true
+parameters/looping = true
 
 [node name="pizza" parent="." unique_id=350528180 instance=ExtResource("3_jjvhh")]
 position = Vector2(160, 111)
