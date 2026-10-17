@@ -3,6 +3,33 @@
 [ext_resource type="Texture2D" uid="uid://c7n1w12k6bcga" path="res://Assets/GameJam_Pizzashop_Canvas.png" id="1_jjgbg"]
 [ext_resource type="AudioStream" uid="uid://xkb63q8ccosx" path="res://Assets/Spider-Man 2 The Game Pizza Theme.mp3" id="2_8gbba"]
 [ext_resource type="PackedScene" uid="uid://c5obbcvunthgd" path="res://Scenes/pizza.tscn" id="3_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://dmp7a45on57na" path="res://Scenes/topping_bin.tscn" id="4_jjvhh"]
+[ext_resource type="Script" uid="uid://kk73jqx4xcy5" path="res://Scripts/toppings.gd" id="5_21xkr"]
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="6_6bp64"]
+
+[sub_resource type="PackedScene" id="PackedScene_344ge"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [PackedInt32Array(), PackedInt32Array()],
+"names": PackedStringArray("toppings", "Area2D", "script", "CollisionShape2D", "CollisionShape2D", "Sprite2D", "Sprite2D", "texture"),
+"node_count": 3,
+"node_ids": PackedInt32Array(153387449, 2084504312, 1647536356),
+"node_paths": [NodePath("."), NodePath(".")],
+"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 1, 2, 0, 0, 1073741824, 0, 4, 3, -1, 0, 0, 1073741825, 0, 6, 5, -1, 1, 7, 1, 0),
+"variants": [ExtResource("5_21xkr"), ExtResource("6_6bp64")],
+"version": 3
+}
+
+[sub_resource type="PackedScene" id="PackedScene_21xkr"]
+resource_local_to_scene = true
+
+[sub_resource type="PackedScene" id="PackedScene_6bp64"]
+resource_local_to_scene = true
+
+[sub_resource type="PackedScene" id="PackedScene_ynf5e"]
+resource_local_to_scene = true
 
 [node name="Main" type="Node2D" unique_id=1732489957]
 
@@ -17,3 +44,21 @@ parameters/looping = true
 
 [node name="pizza" parent="." unique_id=350528180 instance=ExtResource("3_jjvhh")]
 position = Vector2(160, 111)
+
+[node name="topping bins" type="Node" parent="." unique_id=1784122431]
+
+[node name="topping bin" parent="topping bins" unique_id=1665686462 instance=ExtResource("4_jjvhh")]
+position = Vector2(30, 88)
+topping_scene = SubResource("PackedScene_344ge")
+
+[node name="topping bin2" parent="topping bins" unique_id=639469630 instance=ExtResource("4_jjvhh")]
+position = Vector2(75, 88)
+topping_scene = SubResource("PackedScene_21xkr")
+
+[node name="topping bin3" parent="topping bins" unique_id=993833156 instance=ExtResource("4_jjvhh")]
+position = Vector2(245, 88)
+topping_scene = SubResource("PackedScene_6bp64")
+
+[node name="topping bin4" parent="topping bins" unique_id=1286004568 instance=ExtResource("4_jjvhh")]
+position = Vector2(290, 88)
+topping_scene = SubResource("PackedScene_ynf5e")

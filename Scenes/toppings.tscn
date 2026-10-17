@@ -1,7 +1,15 @@
 [gd_scene format=3 uid="uid://cvk4xp3pxv2ii"]
 
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_arv57"]
+[ext_resource type="Script" uid="uid://kk73jqx4xcy5" path="res://Scripts/toppings.gd" id="1_rnryd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_glbws"]
+
 [node name="toppings" type="Area2D" unique_id=153387449]
+script = ExtResource("1_rnryd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2084504312]
+shape = SubResource("CircleShape2D_glbws")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1647536356]
+texture = ExtResource("1_arv57")
