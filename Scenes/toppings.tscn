@@ -6,6 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_glbws"]
 
 [node name="toppings" type="Area2D" unique_id=153387449]
+z_index = 1
 script = ExtResource("1_rnryd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2084504312]
