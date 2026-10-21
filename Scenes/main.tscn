@@ -4,11 +4,12 @@
 [ext_resource type="AudioStream" uid="uid://xkb63q8ccosx" path="res://Assets/Spider-Man 2 The Game Pizza Theme.mp3" id="2_8gbba"]
 [ext_resource type="PackedScene" uid="uid://c5obbcvunthgd" path="res://Scenes/pizza.tscn" id="3_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://dmp7a45on57na" path="res://Scenes/topping_bin.tscn" id="4_jjvhh"]
-
-[sub_resource type="PackedScene" id="PackedScene_jjvhh"]
-resource_local_to_scene = true
+[ext_resource type="PackedScene" uid="uid://ctw4likbr6yvt" path="res://Scenes/killbox.tscn" id="5_kry3j"]
 
 [sub_resource type="PackedScene" id="PackedScene_kry3j"]
+resource_local_to_scene = true
+
+[sub_resource type="PackedScene" id="PackedScene_21xkr"]
 resource_local_to_scene = true
 
 [node name="Main" type="Node2D" unique_id=1732489957]
@@ -35,8 +36,11 @@ position = Vector2(75, 88)
 
 [node name="topping bin3" parent="topping bins" unique_id=993833156 instance=ExtResource("4_jjvhh")]
 position = Vector2(245, 88)
-topping_scene = SubResource("PackedScene_jjvhh")
+topping_scene = SubResource("PackedScene_kry3j")
 
 [node name="topping bin4" parent="topping bins" unique_id=1286004568 instance=ExtResource("4_jjvhh")]
 position = Vector2(290, 88)
-topping_scene = SubResource("PackedScene_kry3j")
+topping_scene = SubResource("PackedScene_21xkr")
+
+[node name="killbox" parent="." unique_id=324203343 instance=ExtResource("5_kry3j")]
+position = Vector2(-314, 247)
