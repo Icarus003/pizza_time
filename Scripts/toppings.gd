@@ -24,6 +24,8 @@ func _unhandled_input(event: InputEvent):
 		is_holding_a_topping = false
 		get_viewport().set_input_as_handled()
 
-func _process(_delta):
+func _physics_process(delta: float):
 	if is_held == true:
 		global_position = get_global_mouse_position()
+	else:
+		global_position.y += delta * 20
