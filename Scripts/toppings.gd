@@ -1,5 +1,5 @@
 class_name Topping
-extends Area2D
+extends Node2D
 
 enum Type {WORM}
 

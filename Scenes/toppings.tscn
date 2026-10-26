@@ -4,12 +4,15 @@
 [ext_resource type="Script" uid="uid://kk73jqx4xcy5" path="res://Scripts/toppings.gd" id="1_rnryd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_glbws"]
+radius = 45.0
 
-[node name="toppings" type="Area2D" unique_id=153387449]
+[node name="toppings" type="Node2D" unique_id=1928060651]
 z_index = 1
 script = ExtResource("1_rnryd")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2084504312]
+[node name="Area2D" type="Area2D" parent="." unique_id=939855]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2084504312]
 shape = SubResource("CircleShape2D_glbws")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1647536356]
